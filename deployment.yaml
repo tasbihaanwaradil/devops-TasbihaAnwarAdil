@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-a-juw32781
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devops-a-juw32781
+  template:
+    metadata:
+      labels:
+        app: devops-a-juw32781
+    spec:
+      containers:
+        - name: devops-a-juw32781
+          image: devops-a-juw32781:v1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
